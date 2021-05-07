@@ -29,18 +29,14 @@ class App extends React.Component {
   }
 
   launchExternalComponent() {
-    if (Platform.OS === 'android') {
-      Navigation.showModal({
-        externalComponent: {
-          name: 'RNNCustomComponent',
-          passProps: {
-            text: "Text from JS"
-          }
+    Navigation.showModal({
+      externalComponent: {
+        name: 'RNNCustomComponent',
+        passProps: {
+          text: "Text from JS"
         }
-      });
-    } else if (Platform.OS === 'ios') {
-      alert("TODO: Create and Launch ExternalComponent on iOS...");
-    }
+      }
+    });
   }
 }
 

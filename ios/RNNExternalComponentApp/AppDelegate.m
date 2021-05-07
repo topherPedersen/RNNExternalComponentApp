@@ -12,6 +12,8 @@
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 
+#import "RNNCustomViewController.h"
+
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
   SKDescriptorMapper *layoutDescriptorMapper = [[SKDescriptorMapper alloc] initWithDefaults];
@@ -32,7 +34,11 @@ static void InitializeFlipper(UIApplication *application) {
 #endif
 
   [ReactNativeNavigation bootstrapWithDelegate:self launchOptions:launchOptions];
-  
+  [ReactNativeNavigation
+      registerExternalComponent:@"RNNCustomComponent"
+                       callback:^UIViewController *(NSDictionary *props, RCTBridge *bridge) {
+                         return [[RNNCustomViewController alloc] initWithProps:props];
+                       }];
 
   return YES;
 }

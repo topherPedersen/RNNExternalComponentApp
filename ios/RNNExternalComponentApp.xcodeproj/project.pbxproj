@@ -12,6 +12,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		4ABCF5F7AE9F226C9240FA6F /* libPods-RNNExternalComponentApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AECE7825A43DBC15431F5A6 /* libPods-RNNExternalComponentApp.a */; };
+		736098DD26459DD90092CB4F /* RNNCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736098DC26459DD90092CB4F /* RNNCustomViewController.m */; };
+		736098E426459E510092CB4F /* RNNNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736098E326459E510092CB4F /* RNNNativeViewController.m */; };
 		7C8AEB2BA9498E6F4621A316 /* libPods-RNNExternalComponentApp-RNNExternalComponentAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4B70E8E9F35CF985D41255 /* libPods-RNNExternalComponentApp-RNNExternalComponentAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,10 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNNExternalComponentApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNNExternalComponentApp/main.m; sourceTree = "<group>"; };
 		6C672BF135A73E999BA33183 /* Pods-RNNExternalComponentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNNExternalComponentApp.debug.xcconfig"; path = "Target Support Files/Pods-RNNExternalComponentApp/Pods-RNNExternalComponentApp.debug.xcconfig"; sourceTree = "<group>"; };
+		736098DB26459D940092CB4F /* RNNCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNCustomViewController.h; sourceTree = "<group>"; };
+		736098DC26459DD90092CB4F /* RNNCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNCustomViewController.m; sourceTree = "<group>"; };
+		736098E226459E1F0092CB4F /* RNNNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNNativeViewController.h; sourceTree = "<group>"; };
+		736098E326459E510092CB4F /* RNNNativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNNativeViewController.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNNExternalComponentApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8856F468D1A9DA7A8D371694 /* Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.release.xcconfig"; path = "Target Support Files/Pods-RNNExternalComponentApp-RNNExternalComponentAppTests/Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A5E2E920D073AA3D6F5024DE /* Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RNNExternalComponentApp-RNNExternalComponentAppTests/Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +98,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				736098DB26459D940092CB4F /* RNNCustomViewController.h */,
+				736098DC26459DD90092CB4F /* RNNCustomViewController.m */,
+				736098E226459E1F0092CB4F /* RNNNativeViewController.h */,
+				736098E326459E510092CB4F /* RNNNativeViewController.m */,
 			);
 			name = RNNExternalComponentApp;
 			sourceTree = "<group>";
@@ -114,7 +124,6 @@
 				A5E2E920D073AA3D6F5024DE /* Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.debug.xcconfig */,
 				8856F468D1A9DA7A8D371694 /* Pods-RNNExternalComponentApp-RNNExternalComponentAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -411,6 +420,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736098E426459E510092CB4F /* RNNNativeViewController.m in Sources */,
+				736098DD26459DD90092CB4F /* RNNCustomViewController.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
