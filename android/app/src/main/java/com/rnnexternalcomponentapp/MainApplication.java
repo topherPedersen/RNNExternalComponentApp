@@ -44,6 +44,9 @@ public class MainApplication extends NavigationApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+
+    // Register React Native Navigation ExternalComponent(s) Here
+      registerExternalComponent("RNNCustomComponent", new FragmentCreator());
     
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }

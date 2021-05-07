@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -16,7 +8,9 @@ import {
   useColorScheme,
   View,
   Button,
+  Platform,
 } from 'react-native';
+import { Navigation } from 'react-native-navigation';
 
 class App extends React.Component {
   constructor(props) {
@@ -35,7 +29,18 @@ class App extends React.Component {
   }
 
   launchExternalComponent() {
-    alert("TODO: Create an ExternalComponent to launch...");
+    if (Platform.OS === 'android') {
+      Navigation.showModal({
+        externalComponent: {
+          name: 'RNNCustomComponent',
+          passProps: {
+            text: "Text from JS"
+          }
+        }
+      });
+    } else if (Platform.OS === 'ios') {
+      alert("TODO: Create and Launch ExternalComponent on iOS...");
+    }
   }
 }
 
