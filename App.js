@@ -26,7 +26,7 @@ class App extends React.Component {
   render() {
     return(
       <SafeAreaView style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>RNNExternalComponentApp</Text>
+        <Text>RNNExternalComponentApp (WelcomeScreen)</Text>
         <Button
           title="Launch RNN ExternalComponent" 
           onPress={ () => this.launchExternalComponent() } />
