@@ -15,6 +15,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Button,
 } from 'react-native';
 
 class App extends React.Component {
@@ -26,8 +27,15 @@ class App extends React.Component {
     return(
       <SafeAreaView style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>RNNExternalComponentApp</Text>
+        <Button
+          title="Launch RNN ExternalComponent" 
+          onPress={ () => this.launchExternalComponent() } />
       </SafeAreaView>
     );
+  }
+
+  launchExternalComponent() {
+    alert("TODO: Create an ExternalComponent to launch...");
   }
 }
 
